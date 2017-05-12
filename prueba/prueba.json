@@ -1,0 +1,12 @@
+{
+    "datos": {
+        "key": "Series1",
+		"color":"#d62728",
+		"values":[
+			{"label":"Group A","value":"2"},
+			{"label":"Group B","value":"-6"},
+			{"label":"Group C","value":"8"},
+			
+		]
+    }
+}

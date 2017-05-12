@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="grafico">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Pincha aqui</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css"/>    
+  	<script src="bower_components/angular/angular.js"></script>
+  	<script src="bower_components/d3/d3.js"></script>
+  	<script src="bower_components/nvd3/nv.d3.js"></script>
+  	<script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+  	<link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
+    <script src="app.js"></script>
+    <script src="factorias/graficasSrv.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <div id="radio-b">
+      <form name="formulario">
+        <input name="hola" type="radio" value="1" ng-model="opcion">1</input>
+        <input name="hola" type="radio" value="2" ng-model="opcion">2</input>
+        <input name="hola" type="radio" value="3" ng-model="opcion">3</input>
+      </form>
+    </div>
+    <div style="width:100%;">
+      <div style="width:33%; float:left; margin-right:0px" ng-show="opcion==='1'">
+        <nvd3 options="optionsGraficaVertical" data="grafica1"></nvd3>
+      </div>
+      <div style="width:33%; float:left" ng-show="opcion==='2'">
+        <nvd3 options="optionsGraficaDiscos" data="grafica2"></nvd3>
+      </div>
+      <div style="width:3%; float:left; margin-right:0px" ng-show="opcion==='3'">
+        <nvd3 options="optionsGraficaDiscreta" data="grafica3"></nvd3>
+      </div>
+    </div>
+</html>
